@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import Header from '../Components/MusicPlayer/Header';
+import AlbumArt from '../Components/MusicPlayer/AlbumArt';
+import TrackDetails from '../Components/MusicPlayer/TrackDetails';
+import SeekBar from '../Components/MusicPlayer/SeekBar';
+import Controls from '../Components/MusicPlayer/Controls';
 
 class MusicPlayer extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={{color: '#FFF'}}>MusicPlayer</Text>
+        <Header />
+        <AlbumArt />
+        <SeekBar />
+        <TrackDetails />
+        <Controls />
       </View>
     );
   }
@@ -14,7 +23,6 @@ class MusicPlayer extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#2c3e50',
   },
